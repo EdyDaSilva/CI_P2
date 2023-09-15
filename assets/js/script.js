@@ -4,6 +4,9 @@ const inputEl = document.querySelector(".input");
 
 const ulEl = document.querySelector(".list");
 
+let list = JSON.parse(localStorage.getItem("list"));
+
+
 formEl.addEventListener("submit", (event)=>{
     event.preventDefault();
     toDoList();
