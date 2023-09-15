@@ -1,3 +1,4 @@
+/* Reset some default styles and create a centered layout */
 body {
     margin: 0;
     display: flex;
@@ -5,6 +6,7 @@ body {
     background-color: lightgray;
 }
 
+/* Styling for the main form container */
 .form {
     position: absolute;
     top: 30%;
@@ -14,6 +16,7 @@ body {
     border-radius: 10px;
 }
 
+/* Styling for the input field */
 .input {
     width: 100%;
     box-sizing: border-box;
@@ -24,15 +27,18 @@ body {
     font-family: cursive;
 }
 
+/* Styling for the input field's placeholder text */
 .input::placeholder {
     color: lightgray;
 }
 
+/* Styling for the list of to-do items */
 .list {
     padding: 0;
     margin: 0;
 }
 
+/* Styling for individual to-do list items */
 .list li{
     list-style-type: none;
     padding: 20px;
@@ -42,6 +48,7 @@ body {
     position: relative;
 }
 
+/* Styling for the trash icon in each list item */
 .list li .fa-trash{
     color: red;
     position: absolute;
@@ -51,6 +58,7 @@ body {
     cursor: pointer;
 }
 
+/* Styling for the checkmark icon in each list item */
 .list li .fa-circle-check{
     color: green;
     position: absolute;
@@ -60,11 +68,13 @@ body {
     cursor: pointer;
 }
 
+/* Styling for checked (completed) list items */
 .list li.checked {
     color: darkgrey;
     text-decoration: line-through;
 }
 
+/* Styling for the checkmark icon in checked items */
 .list li.checked .fa-circle-check{
     color: darkgray;
 } 
