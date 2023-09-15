@@ -31,5 +31,18 @@ function toDoList(){
     });
     trashBtnEl.addEventListener("click", ()=>{
         liEl.remove();
-    })
+    });
+    updateLocalStorage();
 }
+
+function updateLocalStorage(){
+    const liEls = document.querySelectorAll("li");
+    let list = [];
+    liEls.forEach(liEl=>{
+        list.push({
+            name: liEl.innerText,
+            checked: liEl.classList.contains("checked")
+        });
+    });
+    localStorage.setItem("list", JSON.stringify(list));
+} 
