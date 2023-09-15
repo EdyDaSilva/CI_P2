@@ -1,4 +1,4 @@
-# To-Do List Web Application
+# Tasks To Follow - Web Application
 
 <img src="assets/images/to_do.PNG" alt="site preview">
 <br>
@@ -16,7 +16,7 @@ This is a simple web application for managing your to-do list. You can add tasks
             <pre><code>https://github.com/EdyDaSilva/CI_P2</code></pre>
             <li>Open the <code>index.html</code> file in your web browser.</li>
             <li>You will see an input field where you can type your tasks and a list that displays your tasks.</li>
-            <li>To add a task, type it in the input field and press Enter or click the "Add" button.</li>
+            <li>To add a task, type it in the input field and press Enter.</li>
             <li>To mark a task as completed, click the checkmark icon next to it. Click it again to unmark the task.</li>
             <li>To delete a task, click the trash can icon next to it.</li>
             <li>Your to-do list will be automatically saved in local storage, so you can close and reopen the application without losing your tasks.</li>
@@ -34,7 +34,9 @@ This is a simple web application for managing your to-do list. You can add tasks
 <br>
 <h2>Code Validation</h2>
 <p>https://validator.w3.org/</p>
+<p>https://jigsaw.w3.org/css-validator/</p>
+<p>https://jshint.com/</p>
 <br>
-<h2>Contributing</h2>
-        <p>If you'd like to contribute to this project, please open an issue or submit a pull request.</p>
+<h2>Acknowledgement</h2>
+        <p>Code Institute</p>
         

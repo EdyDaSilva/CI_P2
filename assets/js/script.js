@@ -26,13 +26,13 @@ function toDoList(task){
     // If a task object is provided, use its name instead of the input field value
     if(task){
         newWhatToDo = task.name;
-    }
+    };
    // Create a new list item (li) element
     const liEl = document.createElement("li");
     // Add the "checked" class to the list item if the task is checked
     if(task && task.checked){
         liEl.classList.add("checked");
-    }
+    };
     // Set the text content of the list item to the task description
     liEl.innerText = newWhatToDo;
 
@@ -69,7 +69,7 @@ function toDoList(task){
     });
     // Update local storage with the current list of tasks
     updateLocalStorage();
-}
+};
 
 // Define the updateLocalStorage function to store the list of tasks in local storage
 function updateLocalStorage(){
@@ -82,7 +82,7 @@ function updateLocalStorage(){
             checked: liEl.classList.contains("checked")
         });
     });
-    
+
     // Store the list of tasks in local storage as JSON
     localStorage.setItem("list", JSON.stringify(list));
-} 
+}; 
