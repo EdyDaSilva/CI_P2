@@ -6,15 +6,25 @@ const ulEl = document.querySelector(".list");
 
 let list = JSON.parse(localStorage.getItem("list"));
 
+list.forEach(task=>{
+    toDoList(task)
+})
 
 formEl.addEventListener("submit", (event)=>{
     event.preventDefault();
     toDoList();
 });
 
-function toDoList(){
+function toDoList(task){
     let newWhatToDo = inputEl.value;
+    if(task){
+        newWhatToDo = task.name;
+    }
+   
     const liEl = document.createElement("li");
+    if(task && task.checked){
+        liEl.classList.add("checked");
+    }
     liEl.innerText = newWhatToDo;
     ulEl.appendChild(liEl);
     inputEl.value = ""
@@ -31,16 +41,18 @@ function toDoList(){
 
     checkBtnEl.addEventListener("click", ()=>{
         liEl.classList.toggle("checked")
+        updateLocalStorage();
     });
     trashBtnEl.addEventListener("click", ()=>{
         liEl.remove();
+        updateLocalStorage();
     });
     updateLocalStorage();
 }
 
 function updateLocalStorage(){
     const liEls = document.querySelectorAll("li");
-    let list = [];
+    list = [];
     liEls.forEach(liEl=>{
         list.push({
             name: liEl.innerText,
