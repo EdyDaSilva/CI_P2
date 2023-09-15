@@ -25,4 +25,11 @@ function toDoList(){
     <i class="fa-solid fa-trash">
     `;
     liEl.appendChild(trashBtnEl);
+
+    checkBtnEl.addEventListener("click", ()=>{
+        liEl.classList.toggle("checked")
+    });
+    trashBtnEl.addEventListener("click", ()=>{
+        liEl.remove();
+    })
 }
